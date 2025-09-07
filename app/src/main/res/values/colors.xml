@@ -4,8 +4,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- degradado -->
-    <color name="bg_grad_start">#F3E9FF</color>
-    <color name="bg_grad_mid">#E9E0FF</color>
-    <color name="bg_grad_end">#E6E6FA</color>
+    <color name="bg_grad_start">#F7F2FF</color>
+    <color name="bg_grad_mid">#ECE8FF</color>
+    <color name="bg_grad_end">#E6F0FF</color>
+
 
 </resources>
