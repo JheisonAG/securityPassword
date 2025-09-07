@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_login_gradient">
+
+    <!-- Contenedor centrado (Card) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="12dp"
+        app:strokeColor="@android:color/transparent"
+        app:cardBackgroundColor="?attr/colorSurface"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_max="520dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tituloRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registro_titulo"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:gravity="center"/>
+
+            <!-- Nombre completo -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_nombre_completo"
+                    android:inputType="textPersonName"
+                    android:autofillHints="name"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Correo -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxBackgroundMode="outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_correo"
+                    android:inputType="textEmailAddress"
+                    android:autofillHints="emailAddress"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoContrasenaRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_contrasena"
+                    android:inputType="textPassword"
+                    android:autofillHints="password"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirmar contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoConfirmarContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_confirmar_contrasena"
+                    android:inputType="textPassword"
+                    android:autofillHints="password"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botón crear cuenta -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonCrearCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_crear_cuenta"
+                android:layout_marginTop="18dp"
+                app:cornerRadius="24dp"/>
+
+            <!-- ¿Ya tienes una cuenta? Inicia sesión -->
+            <TextView
+                android:id="@+id/textoIniciaSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registro_pie"
+                android:textSize="14sp"
+                android:textColor="?attr/colorPrimary"
+                android:gravity="center"
+                android:layout_marginTop="18dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

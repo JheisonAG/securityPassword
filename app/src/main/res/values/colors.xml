@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- degradado -->
+    <color name="bg_grad_start">#F3E9FF</color>
+    <color name="bg_grad_mid">#E9E0FF</color>
+    <color name="bg_grad_end">#E6E6FA</color>
+
 </resources>

@@ -1,3 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Security Password</string>
+
+    <!-- APP / GLOBAL -->
+    <string name="app_name">Gestor de Contraseñas</string>
+
+    <!-- VISTA 1: LOGIN -->
+    <string name="titulo_bienvenida">Bienvenido</string>
+    <string name="hint_usuario">Usuario o correo</string>
+    <string name="hint_contrasena">Contraseña</string>
+    <string name="btn_iniciar_sesion">Iniciar sesión</string>
+    <string name="login_olvide_contrasena">¿Olvidaste la contraseña?</string>
+    <string name="login_no_cuenta_registrate">¿No tienes una cuenta? Regístrate</string>
+    <string name="accion_registrate">Regístrate</string>
+
+    <!-- VISTA 2: REGISTRO -->
+    <string name="registro_titulo">Crea tu cuenta</string>
+    <string name="hint_nombre_completo">Nombre completo</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="hint_confirmar_contrasena">Confirmar contraseña</string>
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+    <string name="registro_pie">¿Ya tienes una cuenta? Inicia sesión</string>
+
+    <!-- VISTA 4: RECUPERAR CONTRASEÑA -->
+    <string name="recuperar_titulo">Recuperar contraseña</string>
+    <string name="recuperar_instrucciones">Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.</string>
+    <string name="btn_enviar_enlace">Enviar enlace</string>
+    <string name="recuperar_volver_login">Volver al inicio de sesión</string>
+    <string name="recuperar_consejo_spam">Si no ves el correo, revisa la carpeta de spam.</string>
+
+    <!-- VISTA 5: HOME / PRINCIPAL -->
+    <string name="home_titulo">Tus contraseñas</string>
+    <string name="home_buscar_hint">Buscar por sitio o usuario</string>
+    <string name="home_lista_vacia_titulo">Aún no tienes contraseñas</string>
+    <string name="home_lista_vacia_desc">Pulsa “Agregar contraseña” para crear tu primera entrada.</string>
+    <string name="home_boton_agregar">Agregar contraseña</string>
+
+    <!-- Ítems de la lista (Home) -->
+    <string name="item_servicio_label">Servicio</string>
+    <string name="item_usuario_label">Usuario</string>
+    <string name="item_contrasena_label">Contraseña</string>
+    <string name="item_contrasena_oculta">••••••••</string>
+
+    <string name="nav_home">Inicio</string>
+    <string name="nav_settings">Configuración</string>
+    <string name="msg_settings_wip">La configuración está en desarrollo.</string>
+
+
+    <!-- VISTA 6: AGREGAR CONTRASEÑA -->
+    <string name="agregar_titulo">Agregar contraseña</string>
+    <string name="hint_servicio">Servicio o sitio</string>
+    <string name="hint_url_opcional">URL del sitio (opcional)</string>
+    <!-- Reutiliza: hint_usuario (Usuario o correo) y hint_contrasena (Contraseña) -->
+    <string name="agregar_fortaleza_label">Fortaleza de la contraseña</string>
+    <string name="hint_notas_opcional">Notas (opcional)</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="agregar_cancelar">Cancelar y volver</string>
+
+    <!-- VISTA 7: VER / EDITAR CONTRASEÑA -->
+    <string name="detalle_titulo">Detalles de contraseña</string>
+    <string name="label_servicio">Servicio o sitio</string>
+    <string name="label_url">URL</string>
+    <string name="label_usuario">Usuario o correo</string>
+    <string name="label_contrasena">Contraseña</string>
+    <string name="label_notas">Notas</string>
+
+    <string name="btn_editar">Editar</string>
+    <string name="btn_guardar_cambios">Guardar cambios</string>
+    <string name="btn_eliminar">Eliminar</string>
+
 </resources>
