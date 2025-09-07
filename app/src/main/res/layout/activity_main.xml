@@ -113,10 +113,10 @@
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
+        android:background="@drawable/bg_bottom_nav"
+        android:elevation="8dp"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
-        android:elevation="0dp"
         app:menu="@menu/menu_bottom_nav"
         app:labelVisibilityMode="unlabeled"
         app:itemIconSize="20dp"
@@ -125,5 +125,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
