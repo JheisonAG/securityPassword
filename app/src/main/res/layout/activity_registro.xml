@@ -64,7 +64,7 @@
                 app:boxBackgroundMode="outline">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/campoCorreo"
+                    android:id="@+id/campoEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_correo"
@@ -82,7 +82,7 @@
                 app:endIconMode="password_toggle">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/campoContrasenaRegistro"
+                    android:id="@+id/campoContrasena"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_contrasena"
@@ -111,7 +111,7 @@
 
             <!-- Botón crear cuenta -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/botonCrearCuenta"
+                android:id="@+id/botonRegistrarse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_crear_cuenta"

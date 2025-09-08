@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="56dp"
-    android:padding="12dp"
-    android:background="?attr/selectableItemBackground">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@android:color/darker_gray">
 
-    <!-- Servicio / Sitio -->
-    <TextView
-        android:id="@+id/textoServicio"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textStyle="bold"
-        android:text="@string/item_servicio_label"
-        tools:text="Gmail"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <!-- Usuario o correo asociado -->
-    <TextView
-        android:id="@+id/textoUsuario"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="@string/item_usuario_label"
-        tools:text="usuario@gmail.com"
-        app:layout_constraintTop_toBottomOf="@id/textoServicio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/textoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servicio"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"/>
 
-    <!-- Contraseña oculta -->
-    <TextView
-        android:id="@+id/textoContrasenaOculta"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="@string/item_contrasena_oculta"
-        tools:text="••••••••"
-        app:layout_constraintTop_toBottomOf="@id/textoUsuario"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/textoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="usuario@email.com"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="?attr/colorOnSurface"/>
 
-    <!-- Separador -->
-    <View
-        android:id="@+id/separador"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#1F000000"
-        app:layout_constraintTop_toBottomOf="@id/textoContrasenaOculta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textoUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://ejemplo.com"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"
+            android:textColor="?attr/colorSecondary"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textoFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="01/01/2024"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:gravity="end"
+            android:textColor="?attr/colorOnSurfaceVariant"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

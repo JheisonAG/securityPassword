@@ -68,7 +68,7 @@
                 app:boxBackgroundMode="outline">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/campoCorreoRecuperar"
+                    android:id="@+id/campoEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_correo"
@@ -80,7 +80,7 @@
 
             <!-- Botón enviar -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/botonEnviarEnlace"
+                android:id="@+id/botonRecuperar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_enviar_enlace"
