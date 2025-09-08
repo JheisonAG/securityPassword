@@ -68,4 +68,10 @@
     <string name="btn_guardar_cambios">Guardar cambios</string>
     <string name="btn_eliminar">Eliminar</string>
 
+    <string name="home_icono_servicio">Ícono del servicio</string>
+    <string name="home_btn_copiar">Copiar contraseña</string>
+
+    <!-- Placeholder para mostrar la fortaleza de la contraseña -->
+    <string name="etiqueta_fortaleza">Fortaleza: %1$s</string>
+
 </resources>

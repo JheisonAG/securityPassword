@@ -13,29 +13,35 @@
         <!-- Pantallas -->
         <activity
             android:name=".DetalleContrasenaActivity"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".AgregarContrasenaActivity"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".RecuperarContrasenaActivity"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".RegistroActivity"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".MainActivity"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
 
         <!-- Pantalla inicial: LOGIN -->
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

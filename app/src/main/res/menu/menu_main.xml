@@ -5,8 +5,8 @@
     <item
         android:id="@+id/action_logout"
         android:title="Cerrar Sesión"
-        android:icon="@android:drawable/ic_lock_power_off"
-        app:showAsAction="never" />
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always"
+        app:iconTint="@color/colorPrimary" />
 
 </menu>
-

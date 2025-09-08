@@ -41,20 +41,22 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="6dp"
-        app:strokeColor="?attr/colorOutline"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:strokeColor="@color/colorOutline"
         app:strokeWidth="1dp"
+        app:cardBackgroundColor="@color/colorSurface"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_max="520dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="24dp">
 
             <!-- Título -->
             <TextView
@@ -64,7 +66,8 @@
                 android:text="@string/app_name"
                 android:textStyle="bold"
                 android:textSize="26sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"/>
 
             <!-- Subtítulo/bienvenida -->
             <TextView
@@ -72,17 +75,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/titulo_bienvenida"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:gravity="center"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="4dp"
+                android:textColor="@color/colorOnSurface"/>
 
             <!-- Usuario -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:boxBackgroundMode="outline">
+                android:layout_marginTop="18dp"
+                app:boxBackgroundMode="outline"
+                app:startIconDrawable="@drawable/ic_user"
+                app:boxStrokeColor="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/campoUsuario"
@@ -102,7 +108,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 app:boxBackgroundMode="outline"
-                app:endIconMode="password_toggle">
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:boxStrokeColor="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/campoContrasena"
@@ -122,9 +130,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/login_olvide_contrasena"
                 android:textSize="14sp"
-                android:textColor="?attr/colorPrimary"
+                android:textColor="@color/colorSecondary"
                 android:gravity="end"
-                android:layout_marginTop="6dp"/>
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"/>
 
             <!-- Botón Iniciar sesión -->
             <com.google.android.material.button.MaterialButton
@@ -132,8 +141,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_iniciar_sesion"
-                android:layout_marginTop="12dp"
-                app:cornerRadius="24dp"/>
+                android:layout_marginTop="18dp"
+                app:cornerRadius="24dp"
+                app:icon="@drawable/ic_login"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/colorOnPrimary"/>
 
             <!-- ¿No tienes una cuenta? Regístrate -->
             <TextView
@@ -142,9 +155,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/login_no_cuenta_registrate"
                 android:textSize="14sp"
-                android:textColor="?attr/colorPrimary"
+                android:textColor="@color/colorSecondary"
                 android:gravity="center"
-                android:layout_marginTop="14dp"/>
+                android:layout_marginTop="14dp"
+                android:textStyle="bold"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
