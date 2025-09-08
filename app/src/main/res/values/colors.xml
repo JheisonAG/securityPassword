@@ -8,5 +8,19 @@
     <color name="bg_grad_mid">#ECE8FF</color>
     <color name="bg_grad_end">#E6F0FF</color>
 
+    <!-- Paleta Material Design mejorada -->
+    <color name="colorPrimary">#4F46E5</color> <!-- Indigo 600 -->
+    <color name="colorPrimaryVariant">#3730A3</color> <!-- Indigo 800 -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#06B6D4</color> <!-- Cyan 500 -->
+    <color name="colorSecondaryVariant">#0E7490</color> <!-- Cyan 700 -->
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorError">#EF4444</color> <!-- Red 500 -->
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#1E293B</color>
+    <color name="colorBackground">#F7F2FF</color>
+    <color name="colorOnBackground">#1E293B</color>
+    <color name="colorOutline">#E0E7EF</color>
 
 </resources>
