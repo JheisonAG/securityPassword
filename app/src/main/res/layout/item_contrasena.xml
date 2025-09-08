@@ -4,56 +4,75 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp"
-    app:strokeWidth="1dp"
-    app:strokeColor="@android:color/darker_gray">
+    android:layout_margin="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="@color/colorSurface"
+    app:strokeColor="@color/colorOutline">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
 
-        <TextView
-            android:id="@+id/textoServicio"
-            android:layout_width="match_parent"
+        <!-- Avatar/ícono del servicio -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iconoServicio"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_key"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            android:contentDescription="@string/home_icono_servicio"
+            android:backgroundTint="@android:color/transparent"
+            android:tint="@color/colorPrimary"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Servicio"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="?attr/colorPrimary"/>
+            android:orientation="vertical"
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textoUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="usuario@email.com"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp"
-            android:textColor="?attr/colorOnSurface"/>
+            <TextView
+                android:id="@+id/textoServicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Servicio"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorOnSurface"/>
 
-        <TextView
-            android:id="@+id/textoUrl"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="https://ejemplo.com"
-            android:textSize="12sp"
-            android:layout_marginTop="2dp"
-            android:textColor="?attr/colorSecondary"
-            android:visibility="gone"/>
+            <TextView
+                android:id="@+id/textoUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="usuario@email.com"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/colorPrimary"/>
 
-        <TextView
-            android:id="@+id/textoFecha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="01/01/2024"
-            android:textSize="12sp"
-            android:layout_marginTop="8dp"
-            android:gravity="end"
-            android:textColor="?attr/colorOnSurfaceVariant"/>
+            <TextView
+                android:id="@+id/textoUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://ejemplo.com"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/colorSecondary"
+                android:visibility="gone"/>
 
+            <TextView
+                android:id="@+id/textoFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="01/01/2025"
+                android:textSize="11sp"
+                android:textColor="@color/colorDivider"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
     </LinearLayout>
-
 </com.google.android.material.card.MaterialCardView>

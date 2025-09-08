@@ -13,10 +13,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="24dp"
         app:cardElevation="12dp"
-        app:strokeColor="@android:color/transparent"
-        app:cardBackgroundColor="?attr/colorSurface"
+        app:strokeColor="@color/colorOutline"
+        app:cardBackgroundColor="@color/colorSurface"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="24dp">
 
             <!-- Título -->
             <TextView
@@ -37,14 +37,17 @@
                 android:text="@string/registro_titulo"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"/>
 
             <!-- Nombre completo -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:boxBackgroundMode="outline">
+                app:boxBackgroundMode="outline"
+                app:startIconDrawable="@drawable/ic_user"
+                app:boxStrokeColor="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/campoNombre"
@@ -61,7 +64,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                app:boxBackgroundMode="outline">
+                app:boxBackgroundMode="outline"
+                app:startIconDrawable="@drawable/ic_email"
+                app:boxStrokeColor="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/campoEmail"
@@ -79,7 +84,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 app:boxBackgroundMode="outline"
-                app:endIconMode="password_toggle">
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:boxStrokeColor="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/campoContrasena"
@@ -97,7 +104,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 app:boxBackgroundMode="outline"
-                app:endIconMode="password_toggle">
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:boxStrokeColor="@color/colorPrimary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/campoConfirmarContrasena"
@@ -116,7 +125,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btn_crear_cuenta"
                 android:layout_marginTop="18dp"
-                app:cornerRadius="24dp"/>
+                app:cornerRadius="24dp"
+                app:icon="@drawable/ic_user_add"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/colorOnPrimary"/>
 
             <!-- ¿Ya tienes una cuenta? Inicia sesión -->
             <TextView
@@ -125,9 +138,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/registro_pie"
                 android:textSize="14sp"
-                android:textColor="?attr/colorPrimary"
+                android:textColor="@color/colorSecondary"
                 android:gravity="center"
-                android:layout_marginTop="18dp"/>
+                android:layout_marginTop="14dp"
+                android:textStyle="bold"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

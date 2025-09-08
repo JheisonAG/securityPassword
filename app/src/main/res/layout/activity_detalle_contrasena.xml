@@ -13,151 +13,172 @@
         android:id="@+id/cardDetalle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="12dp"
-        app:strokeColor="@android:color/transparent"
-        app:cardBackgroundColor="?attr/colorSurface"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:strokeColor="@color/colorOutline"
+        app:cardBackgroundColor="@color/colorSurface"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_max="520dp">
+        app:layout_constraintWidth_max="520dp"
+        app:layout_constraintWidth_min="0dp">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:fillViewport="true">
 
-            <!-- Título -->
-            <TextView
-                android:id="@+id/tituloDetalle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/detalle_titulo"
-                android:textStyle="bold"
-                android:textSize="22sp"
-                android:gravity="center"/>
-
-            <!-- Servicio -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:boxBackgroundMode="outline">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/campoServicioDetalle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:hint="@string/hint_servicio"
-                    tools:text="Gmail"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- URL -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:boxBackgroundMode="outline">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/campoUrlDetalle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:hint="@string/hint_url_opcional"
-                    android:inputType="textUri"
-                    tools:text="https://mail.google.com"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Usuario -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:boxBackgroundMode="outline">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/campoUsuarioDetalle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:hint="@string/hint_usuario"
-                    android:inputType="textEmailAddress"
-                    tools:text="usuario@gmail.com"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Contraseña con toggle -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:boxBackgroundMode="outline"
-                app:endIconMode="password_toggle">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/campoContrasenaDetalle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:hint="@string/hint_contrasena"
-                    android:inputType="textPassword"
-                    tools:text="••••••••"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Notas -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:boxBackgroundMode="outline">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/campoNotasDetalle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:hint="@string/hint_notas_opcional"
-                    android:inputType="textMultiLine"
-                    android:minLines="3"
-                    android:maxLines="5"
-                    android:gravity="top"
-                    tools:text="Correo de recuperación: alternativo@correo.com"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Pie: Editar (primaria) y Eliminar (outlined) -->
             <LinearLayout
-                android:id="@+id/contenedorAccionesEdicion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="3"
-                android:layout_marginTop="12dp">
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/botonEditar"
-                    android:layout_width="0dp"
+                <!-- Título -->
+                <TextView
+                    android:id="@+id/tituloDetalle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="@string/btn_editar"
-                    app:cornerRadius="20dp"/>
+                    android:text="@string/detalle_titulo"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginBottom="8dp"/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/botonEliminar"
-                    style="?attr/materialButtonOutlinedStyle"
-                    android:layout_width="0dp"
+                <!-- Servicio -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/btn_eliminar"
-                    app:cornerRadius="20dp"
-                    android:textColor="?attr/colorError"/>
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:startIconDrawable="@drawable/ic_key"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/campoServicioDetalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:hint="@string/hint_servicio"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- URL -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:startIconDrawable="@drawable/ic_link"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/campoUrlDetalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:hint="@string/hint_url_opcional"
+                        android:inputType="textUri"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Usuario -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:startIconDrawable="@drawable/ic_user"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/campoUsuarioDetalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:hint="@string/hint_usuario"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Contraseña con toggle -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/campoContrasenaDetalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:hint="@string/hint_contrasena"
+                        android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Notas -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundMode="outline"
+                    app:startIconDrawable="@drawable/ic_note"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/campoNotasDetalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:hint="@string/hint_notas_opcional"
+                        android:inputType="textMultiLine"
+                        android:minLines="3"
+                        android:maxLines="5"
+                        android:gravity="top"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Pie: Editar (primaria) y Eliminar (outlined) -->
+                <LinearLayout
+                    android:id="@+id/contenedorAccionesEdicion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonEditar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/btn_editar"
+                        app:cornerRadius="20dp"
+                        app:icon="@drawable/ic_edit"
+                        app:iconGravity="textStart"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorOnPrimary"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/botonEliminar"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/btn_eliminar"
+                        app:cornerRadius="20dp"
+                        app:icon="@drawable/ic_delete"
+                        app:iconGravity="textStart"
+                        app:strokeColor="@color/colorError"
+                        app:strokeWidth="2dp"
+                        android:textColor="@color/colorError"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
             </LinearLayout>
-
-        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
